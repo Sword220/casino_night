@@ -9,7 +9,7 @@ class Card
 end
 
 class Deck
-  # attr_accessor :cards
+  attr_accessor :cards, :shuffle
 
   def initialize
     @ranks = %w(A 2 3 4 5 6 7 8 9 10 J Q K)
@@ -30,7 +30,6 @@ class Deck
 
   def shuffle_cards
     @shuffle = @cards.shuffle
-    list
   end
 
   def list
