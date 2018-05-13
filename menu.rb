@@ -4,9 +4,9 @@ require_relative 'blackjack'
 def menu
     puts "GAME MENU"
     puts "1) Black Jack"
-    puts "2) something"
-    puts "3) another thing"
-    puts "4) quit"
+    puts "2) Slot Machine"
+    puts "3) War"
+    puts "4) Quit"
 end
 
 def greeting
