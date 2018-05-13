@@ -1,5 +1,5 @@
 require 'colorize'
-require_relative 'BlackJack' 'SlotMachine' 'War'
+require_relative 'blackjack'
 
 def menu
     puts "GAME MENU"
