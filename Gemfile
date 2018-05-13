@@ -2,3 +2,4 @@
  
 gem 'colorize'
 gem 'pry'
+gem 'byebug'
