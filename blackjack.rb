@@ -8,7 +8,8 @@ require_relative 'cards'
 
 class Dealer
 
-  def initialize
+  def initialize(money)
+    @blackjack_winnings = money
     @first_deal == true
     @player_cards = []
     @player_cards = []
@@ -141,17 +142,21 @@ class Dealer
       puts "Dealer: 'Wow, we both hit 21! That never happens.'".cyan
     elsif @dealer_score > 21
       puts "Dealer: 'Since I hit 21, I win.'".light_cyan
-      puts "Dealer: 'You lose this round.'".light_red
+      @blackjack_winnings += 25
     elsif @player_score == 21
       puts "Dealer: 'Since you've hit 21, you win this round.'".green
+      @blackjack_winnings += 25
     elsif @player_score > 21
       puts "Dealer: 'I'm afraid you have lost this game.'".light_red
+      @blackjack_winnings += -25
     elsif @player_score == @dealer_score
       puts "Dealer: 'It's a tie.' <yawns>\n".light_green
     elsif @player_score > @dealer_score
       puts "Dealer: 'Looks like you win this round, cowboy or -girl.'".light_cyan
+      @blackjack_winnings += 25
     elsif @dealer_score > @player_score
       puts "Dealer: 'I'm afraid you lose this round, partner.'"
+      @blackjack_winnings += -25
     end
     #clear the arrays for both hands
     @player_cards = []
@@ -180,6 +185,7 @@ end
 def end_game(deck)
 
   while true
+    print "\nDealer: 'Your total wallet is now at $#{@blackjack_winnings}.'"
     print "\nDealer: Another round? (Y/N)'\n"
     @choice = gets.strip
     if @choice == 'N'
