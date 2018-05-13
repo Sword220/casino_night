@@ -23,12 +23,12 @@ class Dealer
     puts "but of playing a poor hand well.'".light_black
     puts "                  - Robert Louis Stevenson".light_black
     puts "\n"
-    sleep(0)
+    sleep(2)
     puts "You approach the table and choose an empty chair. It's not too difficult,"
     puts "because they're all empty. The dealer is a disheveled, graying man with the"
     puts "distinct smell of liquor hanging around him."
     puts "\n"
-    sleep(0)
+    sleep(2)
     puts "An uncomfortably long time after you have sat down, the gentleman stirs"
     puts "from an unblinking stare (into eternity or something like that),"
     puts "and begrudgingly eases himself into what some might call 'attentive'."
@@ -72,18 +72,18 @@ class Dealer
         if check_blackjack(@dealer_cards) == true
           @dealer_blackjack = true
         end
-        sleep(0)
+        sleep(2)
         i += 1
       end
       puts "\n"
       @first_deal = false
     end
-    sleep(0)
+    sleep(2)
     puts "The dealer puts #{num} cards in front of you:"
     num.times do
       @player_cards.push(deck.shift)
       puts "You see a #{@player_cards.last.rank} of #{@player_cards.last.suit}".light_blue
-      sleep(0)
+      sleep(2)
     end
     if check_blackjack(@player_cards) == true
       @blackjack = true
