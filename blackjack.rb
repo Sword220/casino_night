@@ -1,5 +1,3 @@
-require 'pry'
-require 'byebug'
 require 'colorize'
 require_relative 'cards'
 
@@ -204,11 +202,12 @@ def end_game(deck)
       puts "-Invalid input-\n"
     end
   end
-
 end
 
+=begin
 @dealer = Dealer.new
 @deck = Deck.new
 @dealer.dealer_shuffle(@deck)
 @dealer.deal(@deck, 2, true)
 @dealer.question(@deck)
+=end
