@@ -31,7 +31,7 @@ def selections
         puts "Please choose a game to play:"
         choice = gets.to_i
         if choice == 1
-            @dealer = Dealer.new
+            @dealer = Dealer.new (500) #500 is the money going in.
             @deck = Deck.new
             @dealer.dealer_shuffle(@deck)
             @dealer.deal(@deck, 2, true)
