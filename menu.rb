@@ -38,7 +38,13 @@ def selections
             @dealer.question(@deck)
             money.add_to_wallet(@blackjack_earnings)
         elsif choice == 2
-            SlotMachine
+            slots = SlotMachine.new
+            slots.welcome
+            slots.slot_main
+            slots.slot_spin
+            slots.multipliers
+            slots.player_winnings
+
         elsif choice == 3
             War
         elsif choice == 4
