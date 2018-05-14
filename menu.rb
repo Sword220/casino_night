@@ -1,5 +1,6 @@
 require 'colorize'
 require_relative 'blackjack'
+require_relative 'slot_machine'
 
 class Wallet
    def initialize
@@ -44,7 +45,6 @@ def selections
             slots.slot_spin
             slots.multipliers
             slots.player_winnings
-
         elsif choice == 3
             War
         elsif choice == 4

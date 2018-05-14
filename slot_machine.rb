@@ -69,13 +69,6 @@ class SlotMachine
 
 end
 
-slots = SlotMachine.new
-
-slots.welcome
-slots.slot_main
-slots.slot_spin
-slots.multipliers
-slots.player_winnings
 
 
 
